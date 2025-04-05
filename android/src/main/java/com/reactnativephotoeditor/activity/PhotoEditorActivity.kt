@@ -198,7 +198,7 @@ open class PhotoEditorActivity : AppCompatActivity(), OnPhotoEditorListener, Vie
     //SAVE
     val btnSave: TextView = findViewById(R.id.btnSave)
     btnSave.setOnClickListener(this)
-    btnSave.setTextColor(Color.BLACK)
+    btnSave.setTextColor(Color.WHITE)
 
     mPhotoEditorView = findViewById(R.id.photoEditorView)
     mTxtCurrentTool = findViewById(R.id.txtCurrentTool)
