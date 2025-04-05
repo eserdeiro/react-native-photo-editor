@@ -1,5 +1,4 @@
 <resources>
-<string name="app_name">Editor de Fotos</string>
 <string name="label_brush">Pincel</string>
 <string name="label_shape">Forma</string>
 <string name="label_oval">Oval</string>

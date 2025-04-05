@@ -1,5 +1,4 @@
 <resources>
-<string name="app_name">Editor de Fotos</string>
 <string name="label_brush">Pincel</string>
 <string name="label_shape">Forma</string>
 <string name="label_oval">Óvalo</string>
@@ -17,6 +16,6 @@
 <string name="msg_save_image_to_share">Por favor, guarde la imagen para compartir</string>
 <string name="msg_share_image">Compartir imagen</string>
 <string name="save_error">Error al guardar. ¡Inténtelo de nuevo!</string>
-<string name="done">Hecho</string>
+<string name="done">Listo</string>
 <string name="label_opacity">Opacidad</string>
 </resources>
