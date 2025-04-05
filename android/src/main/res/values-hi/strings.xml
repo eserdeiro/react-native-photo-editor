@@ -1,0 +1,21 @@
+<resources>
+  <string name="app_name">फ़ोटो एडिटर</string>
+  <string name="label_brush">ब्रश</string>
+  <string name="label_shape">आकार</string>
+  <string name="label_oval">अंडाकार</string>
+  <string name="label_rectangle">आयत</string>
+  <string name="label_line">रेखा</string>
+  <string name="label_emoji">इमोजी</string>
+  <string name="label_sticker">स्टिकर</string>
+  <string name="label_eraser">रबर</string>
+  <string name="label_eraser_mode">रबर मोड</string>
+  <string name="label_text">पाठ</string>
+  <string name="label_filter">फ़िल्टर</string>
+  <string name="label_adjust">समायोजित करें</string>
+  <string name="msg_save_image">क्या आप बिना सहेजे बाहर निकलना चाहते हैं?</string>
+  <string name="app_intent_name">PhotoEditor</string>
+  <string name="msg_save_image_to_share">कृपया साझा करने से पहले छवि सहेजें</string>
+  <string name="msg_share_image">छवि साझा करें</string>
+  <string name="save_error">सहेजने में विफल। कृपया पुनः प्रयास करें!</string>
+  <string name="done">समाप्त</string>
+</resources>

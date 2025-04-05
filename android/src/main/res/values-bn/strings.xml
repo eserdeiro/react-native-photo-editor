@@ -1,0 +1,21 @@
+<resources>
+  <string name="app_name">ফটো এডিটর</string>
+  <string name="label_brush">ব্রাশ</string>
+  <string name="label_shape">আকৃতি</string>
+  <string name="label_oval">ডিম্বাকৃতি</string>
+  <string name="label_rectangle">আয়তক্ষেত্র</string>
+  <string name="label_line">রেখা</string>
+  <string name="label_emoji">ইমোজি</string>
+  <string name="label_sticker">স্টিকার</string>
+  <string name="label_eraser">ইরেজার</string>
+  <string name="label_eraser_mode">ইরেজার মোড</string>
+  <string name="label_text">টেক্সট</string>
+  <string name="label_filter">ফিল্টার</string>
+  <string name="label_adjust">সমন্বয় করুন</string>
+  <string name="msg_save_image">আপনি কি ছবি না সংরক্ষণ করে বের হতে চান?</string>
+  <string name="app_intent_name">PhotoEditor</string>
+  <string name="msg_save_image_to_share">শেয়ার করার আগে অনুগ্রহ করে ছবি সংরক্ষণ করুন</string>
+  <string name="msg_share_image">ছবি শেয়ার করুন</string>
+  <string name="save_error">সংরক্ষণ ব্যর্থ হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন!</string>
+  <string name="done">সম্পন্ন</string>
+</resources>
