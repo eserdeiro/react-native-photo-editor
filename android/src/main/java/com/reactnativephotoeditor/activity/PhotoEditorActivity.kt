@@ -67,7 +67,7 @@ open class PhotoEditorActivity : AppCompatActivity(), OnPhotoEditorListener, Vie
   private var mTxtCurrentTool: TextView? = null
   private var mRvTools: RecyclerView? = null
   private var mRvFilters: RecyclerView? = null
-  private val mEditingToolsAdapter = EditingToolsAdapter(this)
+  private lateinit var mEditingToolsAdapter: EditingToolsAdapter
   private val mFilterViewAdapter = FilterViewAdapter(this)
   private var mRootView: ConstraintLayout? = null
   private val mConstraintSet = ConstraintSet()
@@ -80,7 +80,7 @@ open class PhotoEditorActivity : AppCompatActivity(), OnPhotoEditorListener, Vie
     setContentView(R.layout.photo_editor_view)
     initViews()
 
-    //intern
+    //intern  
     val value = intent.extras
     val path = value?.getString("path")
     val stickers =
@@ -91,6 +91,7 @@ open class PhotoEditorActivity : AppCompatActivity(), OnPhotoEditorListener, Vie
 //    for (stick in stickers) {
 //      print("stick: $stickers")
 //    }
+   mEditingToolsAdapter = EditingToolsAdapter(this, this)
 
     mPropertiesBSFragment = PropertiesBSFragment()
     mPropertiesBSFragment!!.setPropertiesChangeListener(this)

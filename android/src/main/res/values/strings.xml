@@ -18,7 +18,7 @@
   <string name="msg_share_image">Share Image</string>
   <string name="save_error">Failed to save. Please try again!</string>
   <string name="done">Done</string>
-
+  <string name="label_opacity">Opaciy</string>
   <string-array name="photo_editor_emoji">
 
     <!-- Smiles -->

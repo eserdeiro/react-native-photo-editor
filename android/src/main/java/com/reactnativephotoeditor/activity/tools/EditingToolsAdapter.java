@@ -1,5 +1,6 @@
 package com.reactnativephotoeditor.activity.tools;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,40 +15,35 @@ import com.reactnativephotoeditor.R;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author <a href="https://github.com/burhanrashid52">Burhanuddin Rashid</a>
- * @version 0.1.2
- * @since 5/23/2018
- */
 public class EditingToolsAdapter extends RecyclerView.Adapter<EditingToolsAdapter.ViewHolder> {
 
-  private List<ToolModel> mToolList = new ArrayList<>();
-  private OnItemSelected mOnItemSelected;
+  private final List<ToolModel> mToolList = new ArrayList<>();
+  private final OnItemSelected mOnItemSelected;
 
-  public EditingToolsAdapter(OnItemSelected onItemSelected) {
+  public EditingToolsAdapter(Context context, OnItemSelected onItemSelected) {
     mOnItemSelected = onItemSelected;
-    mToolList.add(new ToolModel("Shape", R.drawable.ic_brush, ToolType.SHAPE));
-    mToolList.add(new ToolModel("Eraser", R.drawable.ic_eraser, ToolType.ERASER));
-    mToolList.add(new ToolModel("Filter", R.drawable.ic_colorfilter, ToolType.FILTER));
-    mToolList.add(new ToolModel("Sticker", R.drawable.ic_sticker, ToolType.STICKER));
-    mToolList.add(new ToolModel("Text", R.drawable.ic_smallcaps, ToolType.TEXT));
+
+    mToolList.add(new ToolModel(context.getString(R.string.label_shape), R.drawable.ic_brush, ToolType.SHAPE));
+    mToolList.add(new ToolModel(context.getString(R.string.label_eraser), R.drawable.ic_eraser, ToolType.ERASER));
+    mToolList.add(new ToolModel(context.getString(R.string.label_filter), R.drawable.ic_colorfilter, ToolType.FILTER));
+    mToolList.add(new ToolModel(context.getString(R.string.label_sticker), R.drawable.ic_sticker, ToolType.STICKER));
+    mToolList.add(new ToolModel(context.getString(R.string.label_text), R.drawable.ic_smallcaps, ToolType.TEXT));
   }
 
   public interface OnItemSelected {
     void onToolSelected(ToolType toolType);
   }
 
-  class ToolModel {
-    private String mToolName;
-    private int mToolIcon;
-    private ToolType mToolType;
+  static class ToolModel {
+    final String mToolName;
+    final int mToolIcon;
+    final ToolType mToolType;
 
     ToolModel(String toolName, int toolIcon, ToolType toolType) {
       mToolName = toolName;
       mToolIcon = toolIcon;
       mToolType = toolType;
     }
-
   }
 
   @NonNull
@@ -71,14 +67,16 @@ public class EditingToolsAdapter extends RecyclerView.Adapter<EditingToolsAdapte
   }
 
   class ViewHolder extends RecyclerView.ViewHolder {
-    ImageView imgToolIcon;
-    TextView txtTool;
+    final ImageView imgToolIcon;
+    final TextView txtTool;
 
     ViewHolder(View itemView) {
       super(itemView);
       imgToolIcon = itemView.findViewById(R.id.imgToolIcon);
       txtTool = itemView.findViewById(R.id.txtTool);
-      itemView.setOnClickListener(v -> mOnItemSelected.onToolSelected(mToolList.get(getLayoutPosition()).mToolType));
+      itemView.setOnClickListener(v ->
+        mOnItemSelected.onToolSelected(mToolList.get(getLayoutPosition()).mToolType)
+      );
     }
   }
 }
