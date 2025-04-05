@@ -18,4 +18,8 @@
 <string name="save_error">Error al guardar. ¡Inténtelo de nuevo!</string>
 <string name="done">Listo</string>
 <string name="label_opacity">Opacidad</string>
+<string name="dialog_save">Guardar</string>
+<string name="dialog_cancel">Cancelar</string>
+<string name="dialog_discard">Descartar</string>
+
 </resources>

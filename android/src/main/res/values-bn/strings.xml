@@ -18,5 +18,8 @@
 <string name="save_error">সংরক্ষণ ব্যর্থ হয়েছে। আবার চেষ্টা করুন!</string>
 <string name="done">সম্পন্ন</string>
 <string name="label_opacity">অস্বচ্ছতা</string>
+<string name="dialog_save">সংরক্ষণ করুন</string>
+<string name="dialog_cancel">বাতিল করুন</string>
+<string name="dialog_discard">বর্জন করুন</string>
 
 </resources>

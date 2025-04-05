@@ -18,5 +18,9 @@
 <string name="save_error">Falha ao salvar. Tente novamente!</string>
 <string name="done">Concluído</string>
 <string name="label_opacity">Opacidade</string>
+<string name="dialog_save">Salvar</string>
+<string name="dialog_cancel">Cancelar</string>
+<string name="dialog_discard">Descartar</string>
+
 
 </resources>

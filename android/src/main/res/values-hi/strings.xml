@@ -18,5 +18,8 @@
 <string name="save_error">सहेजने में विफल। कृपया पुनः प्रयास करें!</string>
 <string name="done">हो गया</string>
 <string name="label_opacity">अपारदर्शिता</string>
+<string name="dialog_save">सहेजें</string>
+<string name="dialog_cancel">रद्द करें</string>
+<string name="dialog_discard">त्यागें</string>
 
 </resources>

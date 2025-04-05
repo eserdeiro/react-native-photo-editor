@@ -19,6 +19,10 @@
   <string name="save_error">Failed to save. Please try again!</string>
   <string name="done">Done</string>
   <string name="label_opacity">Opacity</string>
+  <string name="dialog_save">Save</string>
+<string name="dialog_cancel">Cancel</string>
+<string name="dialog_discard">Discard</string>
+
   <string-array name="photo_editor_emoji">
 
     <!-- Smiles -->
