@@ -267,14 +267,15 @@ open class PhotoEditorActivity : AppCompatActivity(), OnPhotoEditorListener, Vie
       this,
       Manifest.permission.WRITE_EXTERNAL_STORAGE
     ) == PackageManager.PERMISSION_GRANTED
+  
     if (hasStoragePermission || isSdkHigherThan28()) {
       showLoading("Saving...")
-      val path: File = Environment.getExternalStoragePublicDirectory(
-        Environment.DIRECTORY_PICTURES
-      )
+  
+      // CAMBIO: usamos cacheDir en lugar de Pictures
+      val path: File = cacheDir
       val file = File(path, fileName)
       path.mkdirs()
-
+  
       mPhotoEditor!!.saveAsFile(file.absolutePath, object : OnSaveListener {
         override fun onSuccess(@NonNull imagePath: String) {
           hideLoading()
@@ -283,7 +284,7 @@ open class PhotoEditorActivity : AppCompatActivity(), OnPhotoEditorListener, Vie
           setResult(ResponseCode.RESULT_OK, intent)
           finish()
         }
-
+  
         override fun onFailure(@NonNull exception: Exception) {
           hideLoading()
           if (!hasStoragePermission) {
@@ -292,7 +293,8 @@ open class PhotoEditorActivity : AppCompatActivity(), OnPhotoEditorListener, Vie
             mPhotoEditorView?.let {
               val snackBar = Snackbar.make(
                 it, R.string.save_error,
-                Snackbar.LENGTH_SHORT)
+                Snackbar.LENGTH_SHORT
+              )
               snackBar.setBackgroundTint(Color.WHITE)
               snackBar.setActionTextColor(Color.BLACK)
               snackBar.setAction("Ok", null).show()
@@ -304,6 +306,7 @@ open class PhotoEditorActivity : AppCompatActivity(), OnPhotoEditorListener, Vie
       requestPer()
     }
   }
+  
 
   private fun requestPer() {
     requestPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
