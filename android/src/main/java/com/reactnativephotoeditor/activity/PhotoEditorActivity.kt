@@ -269,12 +269,14 @@ open class PhotoEditorActivity : AppCompatActivity(), OnPhotoEditorListener, Vie
     ) == PackageManager.PERMISSION_GRANTED
     if (hasStoragePermission || isSdkHigherThan28()) {
       showLoading("Saving...")
-      val path: File = Environment.getExternalStoragePublicDirectory(
-        Environment.DIRECTORY_PICTURES
+      val path = File(
+        Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
+        "PhotoFrames"
       )
-      val file = File(path, fileName)
-      path.mkdirs()
-
+      path.mkdirs()  
+      
+      val file = File(path, fileName) 
+      
       mPhotoEditor!!.saveAsFile(file.absolutePath, object : OnSaveListener {
         override fun onSuccess(@NonNull imagePath: String) {
           hideLoading()
